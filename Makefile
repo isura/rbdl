@@ -1,6 +1,6 @@
 all: rbdl
 
-VERSION     = a54206e4f413
+VERSION     = 791c1db8ed61
 TARBALL     = build/rbdl-$(VERSION).tar.bz2
 TARBALL_URL = \
 https://bitbucket.org/rbdl/rbdl/get/$(VERSION).tar.bz2
@@ -17,7 +17,7 @@ CMAKE_FLAGS = \
 	-DCMAKE_INSTALL_PREFIX:STRING=`rospack find rbdl`/$(INSTALL_DIR)/ \
 	-DCMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING="-O2 -g -fpermissive" \
 	-DBUILD_TESTS:BOOL=TRUE \
-	-DBUILD_ADDON_URDFREADER:BOOL=TRUE
+	-DBUILD_ADDON_URDFREADER:BOOL=FALSE
 
 include $(shell rospack find mk)/download_unpack_build.mk
 
